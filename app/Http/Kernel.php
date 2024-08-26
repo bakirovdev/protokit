@@ -14,7 +14,6 @@ class Kernel extends HttpKernel
      * @var array<int, class-string|string>
      */
     protected $middleware = [
-        // \App\Http\Middleware\TrustHosts::class,
         \Illuminate\Http\Middleware\HandleCors::class,
         \Illuminate\Foundation\Http\Middleware\ValidatePostSize::class,
         \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
@@ -48,19 +47,15 @@ class Kernel extends HttpKernel
      * @var array<string, class-string|string>
      */
     protected $routeMiddleware = [
-        // 'auth' => \App\Http\Middleware\Authenticate::class,
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
-        // 'auth.basic.once' => \App\Http\Middleware\AuthenticateOnceWithBasicAuth::class,
         'auth.session' => \Illuminate\Session\Middleware\AuthenticateSession::class,
         'cache.headers' => \Illuminate\Http\Middleware\SetCacheHeaders::class,
         'can' => \Illuminate\Auth\Middleware\Authorize::class,
-        // 'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
         'password.confirm' => \Illuminate\Auth\Middleware\RequirePassword::class,
         'signed' => \Illuminate\Routing\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
 
-        // 'user.role' => \Modules\User\Middleware\RoleMiddleware::class,
     ];
 
     /**
@@ -71,9 +66,6 @@ class Kernel extends HttpKernel
      * @var string[]
      */
     protected $middlewarePriority = [
-        // \App\Http\Middleware\Authenticate::class,
-        // \App\Http\Middleware\AuthenticateOnceWithBasicAuth::class,
-        // \Modules\User\Middleware\RoleMiddleware::class,
         \Illuminate\Routing\Middleware\SubstituteBindings::class,
     ];
 }
