@@ -24,6 +24,9 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
         'password',
     ];
 
+    public string $newToken;
+
+
     public function getService(): UserService
     {
         return new UserService($this);
