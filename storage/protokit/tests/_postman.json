@@ -1,0 +1,49 @@
+{
+    "Common.Auth.LoginTest.subscriber": {
+        "is_request": true,
+        "request": {
+            "headers": {
+                "Accept": "application/json",
+                "Accept-Language": "en"
+            },
+            "body": {
+                "email": "subscriber@local.host",
+                "password": "test123"
+            },
+            "files": [],
+            "method": "POST",
+            "url": {
+                "path": "common/auth/login",
+                "query": [],
+                "raw": "common/auth/login"
+            }
+        },
+        "response": {
+            "headers": {
+                "Cache-Control": [
+                    "no-cache, private"
+                ],
+                "Date": [
+                    "Thu, 05 Sep 2024 15:37:25 GMT"
+                ],
+                "Content-Type": [
+                    "application/json"
+                ],
+                "X-RateLimit-Limit": [
+                    "10000"
+                ],
+                "X-RateLimit-Remaining": [
+                    "9999"
+                ]
+            },
+            "body": {
+                "token": "Bearer 1|2PQT8ebhM7Og2rmbBNPll6CK6375H25G4RwH8BkA8a44e12b"
+            },
+            "status": {
+                "code": 200,
+                "text": "OK"
+            }
+        },
+        "comment": ""
+    }
+}
