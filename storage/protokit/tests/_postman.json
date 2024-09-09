@@ -24,7 +24,7 @@
                     "no-cache, private"
                 ],
                 "Date": [
-                    "Thu, 05 Sep 2024 15:37:25 GMT"
+                    "Sun, 08 Sep 2024 17:38:31 GMT"
                 ],
                 "Content-Type": [
                     "application/json"
@@ -37,7 +37,7 @@
                 ]
             },
             "body": {
-                "token": "Bearer 1|2PQT8ebhM7Og2rmbBNPll6CK6375H25G4RwH8BkA8a44e12b"
+                "token": "Bearer 1|rxcRgEPj1jXUjj41EhUXfZ9R7dxR71gFuSVCNgyx29b22053"
             },
             "status": {
                 "code": 200,
