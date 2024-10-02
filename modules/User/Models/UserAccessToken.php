@@ -12,6 +12,7 @@ class UserAccessToken extends PersonalAccessToken
 
     protected $casts = [
         'abilities' => 'array',
+        'expires_at' => 'datetime'
     ];
 
     protected static function booted():void

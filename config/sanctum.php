@@ -78,6 +78,7 @@ return [
     'middleware' => [
         'encrypt_cookies' => Illuminate\Cookie\Middleware\EncryptCookies::class,
         'validate_csrf_token' => Illuminate\Foundation\Http\Middleware\ValidateCsrfToken::class,
+        'authenticate_session' => Laravel\Sanctum\Http\Middleware\AuthenticateSession::class,
     ],
 
     'personal_access_token' => \Modules\User\Models\UserAccessToken::class,

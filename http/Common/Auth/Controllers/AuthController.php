@@ -11,10 +11,10 @@ class AuthController extends Controller
     public function login(LoginRequest $request){
         $credentials = $request->only('email', 'password');
 
-        if (!Auth::attempt($credentials))
+        if (!Auth::guard('web')->attempt($credentials))
             return response()->json(['message' => "Password or email incorrect"], 422);
 
-        request()->user()->getService()->createToken();
+        request()->user()->getService()->createNewToken();
         return $this->successResponseWithAccessToken(request()->user());
     }
 }

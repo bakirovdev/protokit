@@ -10,7 +10,7 @@ use App\Base\Service;
 
 class UserService extends Service {
 
-    public function createToken(): void
+    public function createNewToken(): void
     {
         $token = $this->model
             ->createToken(

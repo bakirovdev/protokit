@@ -37,4 +37,6 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
         return $this->hasOne(UserProfile::class, 'user_id');
     }
 
+    // public function role()
+
 }
