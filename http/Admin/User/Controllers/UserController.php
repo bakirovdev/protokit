@@ -2,8 +2,8 @@
 
 namespace Http\Admin\User\Controllers;
 
-use App\Base\Controller;
 use App\Helpers\RoleHelper;
+use App\Http\Controllers\Controller;
 
 class UserController extends Controller
 {

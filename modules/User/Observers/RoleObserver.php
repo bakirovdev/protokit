@@ -10,25 +10,25 @@ class RoleObserver
 {
     public function saving(UserRole $model): void
     {
-        $routes = $model->routes ?? [];
-        $availableRouts = RoleHelper::routeLists(false);
+        // $routes = $model->routes ?? [];
+        // $availableRouts = RoleHelper::routeLists(false);
 
-        $routeGroups = RoleHelper::groupRoutesByCount($routes);
-        $availableRoutGroup = RoleHelper::groupRoutesByCount($availableRouts);
+        // $routeGroups = RoleHelper::groupRoutesByCount($routes);
+        // $availableRoutGroup = RoleHelper::groupRoutesByCount($availableRouts);
 
-        krsort($routeGroups);
+        // krsort($routeGroups);
 
-        foreach($routeGroups as $group => $quantity) {
-            if ($quantity === $availableRoutGroup[$group]) {
-                $routes = array_filter($routes, fn ($value) => !str_starts_with($value, $group));
-                $routes[] = "$group.*";
-            }
-        }
+        // foreach($routeGroups as $group => $quantity) {
+        //     if ($quantity === $availableRoutGroup[$group]) {
+        //         $routes = array_filter($routes, fn ($value) => !str_starts_with($value, $group));
+        //         $routes[] = "$group.*";
+        //     }
+        // }
 
-        $routes = array_values($routes);
-        sort($routes);
+        // $routes = array_values($routes);
+        // sort($routes);
 
-        $model->routes = $routes;
+        // $model->routes = $routes;
 
     }
 

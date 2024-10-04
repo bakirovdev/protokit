@@ -11,6 +11,7 @@ use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Foundation\Auth\Access\Authorizable;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\Access\Authorizable as AuthorizableContract;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class User extends Model implements AuthenticatableContract, AuthorizableContract
 {
@@ -37,6 +38,9 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
         return $this->hasOne(UserProfile::class, 'user_id');
     }
 
-    // public function role()
+    public function role(): BelongsTo
+    {
+        return $this->belongsTo(UserRole::class, 'role_id');
+    }
 
 }

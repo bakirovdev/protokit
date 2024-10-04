@@ -62,7 +62,6 @@ class RoleHelper {
             }
 
         }
-
         $result = array_filter($result, fn ($value) => $value > 1);
 
         return $result;

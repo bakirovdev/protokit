@@ -12,7 +12,6 @@ class RoleMiddleware
     public function handle(Request $request, \Closure $next): Response
     {
         $role = request()->user()->role;
-        dd($role);
         if (!$role) abort(401);
 
         $routePrefix = str_replace('/', '.', request()->route()->getPrefix());

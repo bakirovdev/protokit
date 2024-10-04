@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Base;
+namespace App\Http\Controllers;
 
 use Illuminate\Http\JsonResponse;
 use Illuminate\Foundation\Bus\DispatchesJobs;
